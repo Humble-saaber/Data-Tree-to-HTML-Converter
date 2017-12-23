@@ -1,0 +1,11 @@
+export default class Node {
+  constructor(name){
+  this.name = name;
+  }
+  getName() {
+    return this.name;
+  }
+  buildAttrString(attrs) {
+    return Object.keys(attrs).map(key => ` ${key}="${attrs[key]}"`).join('');
+  }
+}
