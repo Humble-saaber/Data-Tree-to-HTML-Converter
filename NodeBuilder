@@ -1,0 +1,5 @@
+const singleTagsList = new Set(['hr', 'br', 'img']);
+export default (name, ...args) => {
+  const tag = singleTagsList.has(name) ? SingleTag : PairedTag;
+  return new tag(name, ...args);
+};
