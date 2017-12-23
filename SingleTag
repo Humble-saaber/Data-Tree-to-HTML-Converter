@@ -1,0 +1,13 @@
+import Node from './Node.js';
+
+export default class SingleTag extends Node {
+  constructor(name ='', attributes = {}, body = '', children = []) {
+    super(name);
+    this.attributes = attributes;
+    this.body = body;
+    this.children = children;
+  }
+  toString() {
+    return [`<${this.getName()}${this.buildAttrString(this.attributes)}>`].join('');
+  }
+}
